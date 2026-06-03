@@ -1,0 +1,1 @@
+"""OpenAI fallback client placeholder."""
