@@ -1,0 +1,19 @@
+{
+  "hosting": {
+    "source": "frontend",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/api/**",
+        "run": {
+          "serviceId": "instareply-ai-backend",
+          "region": "us-central1"
+        }
+      }
+    ]
+  }
+}
