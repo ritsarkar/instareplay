@@ -14,14 +14,16 @@ export function Topbar() {
       </div>
       
       <div className="flex items-center gap-4">
-        <button className="relative p-2 text-slate-400 hover:text-slate-600 transition-colors rounded-full hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1">
-          <Bell className="h-5 w-5" />
-          <span className="absolute top-1.5 right-1.5 h-2 w-2 rounded-full bg-rose-500 border-2 border-white"></span>
+        <button aria-label="Notifications" className="relative p-2 text-slate-400 hover:text-slate-600 transition-colors rounded-full hover:bg-slate-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-1">
+          <Bell aria-hidden="true" className="h-5 w-5" />
+          <span className="absolute top-1.5 right-1.5 h-2 w-2 rounded-full bg-rose-500 border-2 border-white">
+            <span className="sr-only">Unread notifications</span>
+          </span>
         </button>
         
         <div className="h-6 w-px bg-slate-200 mx-1 hidden sm:block"></div>
         
-        <button className="flex items-center gap-2 focus:outline-none">
+        <button aria-label="User menu" className="flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-1 rounded-full">
           <div className="hidden text-right sm:block mr-1">
             <p className="text-sm font-semibold text-slate-700 leading-none">Institute Admin</p>
             <p className="text-xs text-slate-500 mt-1">admin@instareply.ai</p>

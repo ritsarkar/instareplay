@@ -1,0 +1,3 @@
+## 2025-01-24 - Missing ARIA Labels on Icon-Only Buttons
+**Learning:** Found an app-wide accessibility issue where icon-only buttons (like notification bells, trash icons, and close modal icons) are missing `aria-label` attributes and screen-reader specific tags. This makes these actions completely invisible or confusing for screen reader users. Additionally, visible focus styles (`focus-visible`) are sometimes missing, degrading keyboard navigation.
+**Action:** When adding new icon-only buttons, always ensure an `aria-label` or `title` is present, hide the internal icons with `aria-hidden="true"`, provide `.sr-only` text for badges if applicable, and enforce `focus-visible` styles for better keyboard accessibility.
