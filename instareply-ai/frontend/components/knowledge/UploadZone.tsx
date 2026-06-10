@@ -37,17 +37,26 @@ export function UploadZone() {
   return (
     <>
       <div 
+        role="button"
+        tabIndex={0}
         onClick={() => setIsOpen(true)}
-        className="group relative cursor-pointer overflow-hidden rounded-2xl border-2 border-dashed border-indigo-200 bg-indigo-50/50 p-10 text-center transition-all hover:border-indigo-400 hover:bg-indigo-50"
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            setIsOpen(true);
+          }
+        }}
+        aria-label="Upload document"
+        className="group relative cursor-pointer overflow-hidden rounded-2xl border-2 border-dashed border-indigo-200 bg-indigo-50/50 p-10 text-center transition-all hover:border-indigo-400 hover:bg-indigo-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2"
       >
         <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-white text-indigo-500 shadow-sm transition-transform group-hover:scale-110 group-hover:text-indigo-600">
           <UploadCloud className="h-7 w-7" />
         </div>
         <p className="text-lg font-semibold text-slate-900">Add Knowledge Document</p>
         <p className="mt-2 text-sm text-slate-500">Paste your FAQs, policies, or product details to train the AI.</p>
-        <button className="mt-6 inline-flex items-center gap-2 rounded-lg bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm transition-colors hover:bg-indigo-700">
+        <span className="mt-6 inline-flex items-center gap-2 rounded-lg bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm transition-colors hover:bg-indigo-700">
           <Plus className="h-4 w-4" /> Add Text
-        </button>
+        </span>
       </div>
 
       {isOpen && (
@@ -57,7 +66,8 @@ export function UploadZone() {
               <h2 className="text-lg font-bold text-slate-900">Add Text Document</h2>
               <button 
                 onClick={() => setIsOpen(false)}
-                className="rounded-full p-2 text-slate-400 hover:bg-slate-100 hover:text-slate-600 transition-colors"
+                aria-label="Close dialog"
+                className="rounded-full p-2 text-slate-400 hover:bg-slate-100 hover:text-slate-600 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
               >
                 <X className="h-5 w-5" />
               </button>
