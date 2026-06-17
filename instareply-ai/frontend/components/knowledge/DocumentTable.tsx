@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { FileText, Loader2, CheckCircle2, AlertCircle, Trash2 } from "lucide-react";
-import api from "@/lib/api";
+import { api } from "@/lib/api";
 
 interface KnowledgeDoc {
   id: string;
@@ -93,7 +93,11 @@ export function DocumentTable() {
               </div>
               
               <div className="col-span-2 flex justify-end">
-                <button className="rounded-lg p-2 text-slate-400 hover:bg-rose-50 hover:text-rose-600 transition-colors">
+                <button
+                  className="rounded-lg p-2 text-slate-400 hover:bg-rose-50 hover:text-rose-600 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-rose-500"
+                  aria-label={`Delete ${doc.title}`}
+                  title={`Delete ${doc.title}`}
+                >
                   <Trash2 className="h-4 w-4" />
                 </button>
               </div>
