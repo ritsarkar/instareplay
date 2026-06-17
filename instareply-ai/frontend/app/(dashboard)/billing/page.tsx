@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import api from "@/lib/api";
+import { api } from "@/lib/api";
 import { Check, Zap, Shield, Sparkles } from "lucide-react";
 import Script from "next/script";
 
