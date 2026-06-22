@@ -1,0 +1,3 @@
+## 2024-06-22 - [Accessibility] Standardize icon-only buttons
+**Learning:** Many icon-only buttons currently lack clear ARIA labels or standard tooltip titles (`title`). Furthermore, `lucide-react` icons aren't hidden from screen readers automatically which leads to poor screen reader navigation.
+**Action:** When adding icon-only buttons, always apply `aria-label` and `title` to the `button` element and add `aria-hidden="true"` to the internal `lucide-react` icon to prevent redundant announcements.
