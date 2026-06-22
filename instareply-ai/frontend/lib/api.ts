@@ -6,6 +6,8 @@ export const api = axios.create({
   timeout: 15000,
 });
 
+export default api;
+
 api.interceptors.request.use((config) => {
   const token = useAuthStore.getState().accessToken;
   if (token) {
