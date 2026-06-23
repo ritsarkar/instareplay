@@ -56,10 +56,12 @@ export function UploadZone() {
             <div className="flex items-center justify-between border-b border-slate-100 px-6 py-4">
               <h2 className="text-lg font-bold text-slate-900">Add Text Document</h2>
               <button 
+                aria-label="Close"
+                title="Close"
                 onClick={() => setIsOpen(false)}
                 className="rounded-full p-2 text-slate-400 hover:bg-slate-100 hover:text-slate-600 transition-colors"
               >
-                <X className="h-5 w-5" />
+                <X aria-hidden="true" className="h-5 w-5" />
               </button>
             </div>
             

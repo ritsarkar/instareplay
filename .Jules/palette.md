@@ -1,0 +1,1 @@
+## 2024-05-18 - Missing ARIA Labels on Icon Buttons\n**Learning:** The project relies heavily on icon-only buttons (e.g. Bell, X, Trash) that often lack necessary accessibility attributes (`aria-label`, `title` on button; `aria-hidden` on icon).\n**Action:** Add these attributes to icon-only buttons.
