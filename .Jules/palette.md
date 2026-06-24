@@ -1,0 +1,3 @@
+## 2026-06-24 - Missing ARIA Labels and Focus States on Icon-Only Buttons
+**Learning:** Icon-only buttons using `lucide-react` in this app's design system frequently omit `aria-label`/`title` attributes, lack `aria-hidden="true"` on the inner icon to hide it from screen readers, and frequently miss `focus-visible` styling for keyboard navigation.
+**Action:** Always verify icon-only buttons include `aria-label`, `title`, `aria-hidden="true"` on the icon itself, and standard focus ring styles (`focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-1`).
