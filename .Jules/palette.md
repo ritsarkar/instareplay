@@ -1,0 +1,3 @@
+## 2024-05-14 - Icon Buttons Accessibility Context
+**Learning:** Icon buttons used in tables or topbars (e.g., trash or bell icons) without text labels fail to provide context to screen readers, and rely purely on visual inference. Furthermore, standard `focus` utility classes may apply unsightly outlines to mouse clicks, discouraging their use.
+**Action:** Always add `aria-label` to provide context for screen readers, `title` to provide tooltips for mouse users, and `aria-hidden="true"` to the inner SVG to hide redundant visual information from screen readers. Use `focus-visible` variants instead of `focus` to ensure focus rings are drawn for keyboard users while leaving mouse interactions unaffected.
