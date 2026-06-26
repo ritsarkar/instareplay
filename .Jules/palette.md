@@ -1,0 +1,3 @@
+## 2024-05-24 - Accessibility improvements for icon-only buttons
+**Learning:** Found several icon-only buttons across components (e.g. `DocumentTable`, `UploadZone`, `Topbar`) that lacked accessible names (`aria-label`, `title`) and explicit `type="button"`. The SVG icons inside were missing `aria-hidden="true"`, causing screen reader redundancy, and some used `focus` instead of `focus-visible`, creating persistent focus rings on mouse click.
+**Action:** When implementing icon-only buttons, always ensure they have a descriptive `aria-label` and `title`. Add `aria-hidden="true"` to the inner SVG icon to prevent redundant announcements. Use `focus-visible:outline-none focus-visible:ring-2` to support keyboard navigation gracefully without disrupting mouse interaction.
