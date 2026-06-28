@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { FileText, Loader2, CheckCircle2, AlertCircle, Trash2 } from "lucide-react";
-import api from "@/lib/api";
+import { api } from "@/lib/api";
 
 interface KnowledgeDoc {
   id: string;
