@@ -1,0 +1,3 @@
+## 2026-06-30 - Accessible Icon-Only Buttons
+**Learning:** Found multiple instances of icon-only buttons (Notifications, Modal Close, Delete) across the application components (Topbar, UploadZone, DocumentTable) missing proper accessibility attributes. When using lucide-react icons inside buttons, screen readers might announce nothing or confusing content if aria-labels are missing.
+**Action:** Always include `aria-label` and `title` on the `<button>` element, apply `aria-hidden="true"` to the internal lucide-react `<Icon>` component, and ensure keyboard focus states are visible using `focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-1`.
