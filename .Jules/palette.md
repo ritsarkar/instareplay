@@ -1,0 +1,3 @@
+## 2025-07-02 - Dynamic ARIA Labels for Destructive Actions
+**Learning:** Using generic ARIA labels like "Delete" for row-specific destructive actions in tables (like in DocumentTable) provides insufficient context for screen reader users, who might not know *what* is being deleted when tabbing quickly. Dynamic labels (e.g., ``aria-label={`Delete ${doc.title}`}``) solve this.
+**Action:** Always interpolate identifying information (like title or name) into the `aria-label` and `title` attributes of icon-only action buttons within lists or tables.
