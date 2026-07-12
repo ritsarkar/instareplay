@@ -1,0 +1,3 @@
+## 2024-07-12 - Dynamic ARIA labels in tables
+**Learning:** For action buttons within lists or tables (like DocumentTable), static ARIA labels like "Delete" are insufficient for screen reader users because they lack context of which item is being deleted.
+**Action:** Always interpolate identifying information into ARIA labels for list items (e.g., `aria-label={"Delete " + doc.title}`) to provide full context, and ensure standard focus classes are used alongside `aria-hidden="true"` on internal icons.
