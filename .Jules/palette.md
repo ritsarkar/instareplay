@@ -1,0 +1,3 @@
+## 2025-01-20 - Dynamic ARIA Labels for List Actions
+**Learning:** When adding actions (like a delete button) to repeating elements in a list or table, static ARIA labels (e.g., "Delete") lack context for screen reader users when navigating button-by-button.
+**Action:** Always use dynamic ARIA labels and titles that interpolate identifying information from the row/item (e.g., `aria-label="Delete ${doc.title}"`) to provide clear, actionable context for assistive technologies.
