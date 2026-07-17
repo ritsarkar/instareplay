@@ -1,0 +1,3 @@
+## 2023-10-27 - Dynamic ARIA Labels for List Actions
+**Learning:** For icon-only buttons in lists (like tables or feeds), static ARIA labels (e.g. `aria-label="Delete"`) fail to provide context about *what* is being deleted.
+**Action:** Always interpolate identifying data into ARIA labels for action buttons within lists (e.g. `aria-label={\`Delete \${item.title}\`}`) and add corresponding `title` attributes for sighted users on hover.
