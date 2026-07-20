@@ -1,0 +1,1 @@
+## 2024-05-18 - Dynamic ARIA Labels in Lists\n**Learning:** Action buttons in lists/tables need dynamic ARIA labels (e.g. `aria-label=\Delete ${doc.title}\`) to provide proper context for screen readers.\n**Action:** Always include identifying context in ARIA labels for repetitive actions in lists.
