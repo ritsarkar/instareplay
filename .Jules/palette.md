@@ -1,0 +1,3 @@
+## 2026-07-24 - Dynamic Context for Action Buttons in Lists/Tables
+**Learning:** When using icon-only action buttons (like a delete button) in a list or table, a generic `aria-label="Delete"` is insufficient for screen reader users, as it lacks context about *what* is being deleted.
+**Action:** Use dynamic ARIA labels and titles that interpolate identifying information from the current row/item (e.g., ``aria-label={`Delete ${doc.title}`}``) to provide better context. Also apply `aria-hidden="true"` to the internal icon to prevent redundant announcements, and ensure proper `focus-visible` styling is present for keyboard navigation.
