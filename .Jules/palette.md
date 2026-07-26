@@ -1,0 +1,3 @@
+## 2026-07-26 - Context-Aware ARIA Labels for Dynamic Tables
+**Learning:** When adding ARIA labels to icon-only action buttons inside dynamic lists or tables (like a Document Table), a static label like "Delete" is insufficient and confusing for screen reader users when multiple rows exist. The label needs to interpolate identifying information from the row data to provide necessary context.
+**Action:** Always use dynamic template literals for ARIA labels and titles on action buttons within mapped lists (e.g., `aria-label={\`Delete ${item.name}\`}`) to ensure each button is uniquely identifiable by assistive technologies.
