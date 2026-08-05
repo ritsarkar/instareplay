@@ -93,8 +93,13 @@ export function DocumentTable() {
               </div>
               
               <div className="col-span-2 flex justify-end">
-                <button className="rounded-lg p-2 text-slate-400 hover:bg-rose-50 hover:text-rose-600 transition-colors">
-                  <Trash2 className="h-4 w-4" />
+                <button
+                  className="rounded-lg p-2 text-slate-400 hover:bg-rose-50 hover:text-rose-600 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-1"
+                  type="button"
+                  aria-label={`Delete ${doc.title}`}
+                  title={`Delete ${doc.title}`}
+                >
+                  <Trash2 className="h-4 w-4" aria-hidden="true" />
                 </button>
               </div>
             </div>
