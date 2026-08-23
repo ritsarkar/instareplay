@@ -1,0 +1,3 @@
+## 2023-10-25 - [Dynamic ARIA labels for Data Table Actions]
+**Learning:** Icon-only action buttons within looping data structures (like maps for tables) often fail accessibility checks or lack sufficient context. Just applying `aria-label="Delete"` is insufficient for screen readers as it doesn't indicate *what* is being deleted.
+**Action:** When working on lists or tables, ensure ARIA labels and `title` attributes on action buttons use template literals to dynamically inject contextual information (e.g. `` aria-label={`Delete ${doc.title}`} ``), and add `aria-hidden="true"` to the internal icon to avoid redundancy.
