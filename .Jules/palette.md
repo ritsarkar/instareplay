@@ -1,0 +1,3 @@
+## 2025-01-20 - Dynamic ARIA labels for list/table action buttons
+**Learning:** Hardcoded ARIA labels on action buttons (like "Delete") inside lists or tables lack context for screen reader users, making it difficult to know *which* item they are acting upon when navigating by interactive elements.
+**Action:** Always use dynamic ARIA labels (e.g., `aria-label={\`Delete ${item.name}\`}`) for action buttons inside iterative components like maps, lists, and tables to provide full context to assistive technologies.

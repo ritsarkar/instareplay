@@ -55,11 +55,13 @@ export function UploadZone() {
           <div className="w-full max-w-2xl overflow-hidden rounded-2xl bg-white shadow-2xl">
             <div className="flex items-center justify-between border-b border-slate-100 px-6 py-4">
               <h2 className="text-lg font-bold text-slate-900">Add Text Document</h2>
-              <button 
+              <button
+                aria-label="Close modal"
+                title="Close modal"
                 onClick={() => setIsOpen(false)}
-                className="rounded-full p-2 text-slate-400 hover:bg-slate-100 hover:text-slate-600 transition-colors"
+                className="rounded-full p-2 text-slate-400 hover:bg-slate-100 hover:text-slate-600 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-1"
               >
-                <X className="h-5 w-5" />
+                <X aria-hidden="true" className="h-5 w-5" />
               </button>
             </div>
             
