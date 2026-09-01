@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Plus, X, UploadCloud, Loader2 } from "lucide-react";
-import api from "@/lib/api";
+import { api } from "@/lib/api";
 
 export function UploadZone() {
   const [isOpen, setIsOpen] = useState(false);
