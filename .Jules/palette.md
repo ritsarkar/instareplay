@@ -1,0 +1,3 @@
+## 2024-05-18 - [Add Dynamic ARIA Labels and Focus Styles for Icon-Only Buttons]
+**Learning:** When improving accessibility for lists with icon-only action buttons (like a delete button in a document list), static aria labels (e.g., "Delete") are insufficient for screen readers because they lack context.
+**Action:** Always interpolate identifying information into ARIA labels and titles (e.g., `aria-label={\`Delete ${item.title}\`}`). Ensure the inner icon receives `aria-hidden="true"`, and attach keyboard navigation focus states (e.g., `focus-visible:outline-none focus-visible:ring-2 ...`) directly to the button element.
