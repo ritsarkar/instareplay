@@ -57,9 +57,11 @@ export function UploadZone() {
               <h2 className="text-lg font-bold text-slate-900">Add Text Document</h2>
               <button 
                 onClick={() => setIsOpen(false)}
-                className="rounded-full p-2 text-slate-400 hover:bg-slate-100 hover:text-slate-600 transition-colors"
+                className="rounded-full p-2 text-slate-400 hover:bg-slate-100 hover:text-slate-600 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-1"
+                aria-label="Close modal"
+                title="Close modal"
               >
-                <X className="h-5 w-5" />
+                <X className="h-5 w-5" aria-hidden="true" />
               </button>
             </div>
             
