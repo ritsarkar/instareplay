@@ -1,0 +1,3 @@
+## 2025-01-20 - Dynamic ARIA Labels in Tables
+**Learning:** For action buttons in dynamic lists or tables (like delete buttons in a Document Table), static `aria-label`s (like "Delete") do not provide enough context for screen readers as they can't determine *which* item is being deleted. Similarly, `Trash2` icons need `aria-hidden="true"` so they aren't redundantly announced.
+**Action:** When adding or updating action buttons in lists/tables, always interpolate identifying information (like document titles) into the `aria-label` and `title` attributes. Also ensure any internal icon components include `aria-hidden="true"` and the standard focus-visible classes are used.
