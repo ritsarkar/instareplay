@@ -1,0 +1,3 @@
+## 2024-05-18 - Contextual ARIA labels for List Action Buttons
+**Learning:** For action buttons like "Delete" or "Edit" that appear repeatedly within a list or table, standard ARIA labels like `aria-label="Delete"` lack context for screen reader users. Interpolating identifying information (e.g., `aria-label={"Delete ${doc.title}"}`) significantly improves accessibility by clarifying exactly which item will be affected.
+**Action:** When adding ARIA labels to icon-only action buttons inside iterative components (`map`), always use template literals to include a unique identifier or title from the list item data.
