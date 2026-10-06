@@ -1,0 +1,3 @@
+## 2024-10-06 - Missing ARIA Labels on Icon Buttons
+**Learning:** The application frequently implements icon-only buttons (like Trash2 for delete, X for close, Bell for notifications) using lucide-react without any ARIA labels, making these actions completely invisible and un-announceable to screen reader users. Also, delete buttons inside lists/tables should use dynamic labels (e.g. `aria-label="Delete Shipping Policy"`) to provide necessary context.
+**Action:** Always verify that icon-only `<button>`s include an explicit `aria-label` attribute (interpolated with contextual data if inside a list), `title` attribute for mouse users, `type="button"`, and set `aria-hidden="true"` on the SVG icon itself to prevent redundant readouts.
