@@ -1,0 +1,3 @@
+## 2024-05-10 - Dynamic ARIA Labels for List Action Buttons
+**Learning:** Icon-only buttons within lists or tables often lack context for screen reader users if they only have static `aria-label="Delete"` attributes. When navigating via screen reader, it can be confusing to know which item is being deleted.
+**Action:** Use dynamic ARIA labels and titles that interpolate identifying information (e.g., `aria-label={"Delete " + doc.title}`) to provide better context, set `type="button"`, apply `aria-hidden="true"` to the internal icon, and ensure standard focus classes (`focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-1`).
