@@ -1,0 +1,3 @@
+## 2024-10-23 - Dynamic ARIA labels and Icon-only buttons
+**Learning:** Icon-only action buttons inside mapped lists (like tables) require dynamic ARIA labels (e.g., `aria-label={`Delete ${doc.title}`}`) to provide proper context to screen readers, distinguishing them from identical buttons in other rows. Additionally, icon-only buttons need `type="button"`, explicit visual focus states (`focus-visible`), and `aria-hidden="true"` on the internal icon to prevent redundant announcements.
+**Action:** Always use dynamic interpolated variables for ARIA labels on action buttons within lists/tables. Apply `focus-visible:outline-none focus-visible:ring-2` to all custom buttons, and hide decorative/redundant icons from screen readers using `aria-hidden="true"`.
