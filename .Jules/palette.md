@@ -1,0 +1,3 @@
+## 2024-11-03 - Icon Button Accessibility
+**Learning:** For action buttons within lists or tables, static ARIA labels (like "Delete") are insufficient for screen readers; they require dynamic labels that interpolate identifying information (e.g., `aria-label="Delete ${doc.title}"`). Additionally, adding `aria-label` to a button without hiding the internal icon (`aria-hidden="true"`) can cause redundant or duplicate announcements.
+**Action:** Always use dynamic ARIA labels and titles for list/table action buttons, explicitly set `type="button"`, implement standard focus classes for keyboard accessibility, and ensure internal icons have `aria-hidden="true"`.
