@@ -1,0 +1,3 @@
+## 2026-11-05 - Add aria-hidden to internal SVG icons in dynamically labeled buttons
+**Learning:** When creating action buttons with dynamic ARIA labels (e.g. `aria-label="Delete ${doc.title}"`) in a list map, the internal SVG icon (like a Lucide icon) must have `aria-hidden="true"` applied directly to it. Otherwise, screen readers may redundantly announce the icon alongside the dynamic label, causing confusion.
+**Action:** When adding dynamic `aria-label` or `title` to an icon-only button inside a loop, ensure the internal SVG component (e.g. `<Trash2 />`) has `aria-hidden="true"` explicitly set on it.
